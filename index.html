@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>NEW ERA 2047 - COIN OF THE NEW GENERATION</title>
+  <link href="https://fonts.googleapis.com/css?family=Holtwood+One+SC" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+	<link rel="icon" href="favicon.png">
+</head>
+<body>
+<div id="wrapper" class="wrapper">
+	<marquee behavior="alternate" direction="right" truespeed="1200"><a href="#" id="link">🇺🇸 FOLLOW US IN TWITTER NOW 🇺🇸 FOLLOW US IN TWITTER NOW</a></marquee>
+</div>
+<div class="text">Click on background !</div>
+  <script  src="./script.js"></script>
+	<div id="wrapper">Click me!</div>
+
+<audio id="thx" src="thx.mp3"></audio>
+<audio id="audio1" src="audio1.mp3"></audio>
+<audio id="audio2" src="audio2.mp3"></audio>
+<audio id="audio3" src="audio3.mp3"></audio>
+<audio id="audio4" src="audio4.mp3"></audio>
+<audio id="audio5" src="audio5.mp3"></audio>
+
+<script>
+  const audiothx = document.getElementById('thx');
+  const tracks = [
+    document.getElementById('audio1'),
+    document.getElementById('audio2'),
+    document.getElementById('audio3'),
+    document.getElementById('audio4'),
+    document.getElementById('audio5')
+  ];
+
+ 
+  document.body.addEventListener('click', (event) => {
+
+    if (event.target.closest('#wrapper')) return;
+
+
+    tracks.forEach(track => {
+      track.pause();
+      track.currentTime = 0;
+    });
+
+   
+    const randomTrack = tracks[Math.floor(Math.random() * tracks.length)];
+    randomTrack.play().catch(error => {
+      console.log("Play error for random track:", error);
+    });
+  });
+
+  const link = document.getElementById('link');
+
+
+  document.getElementById('wrapper').addEventListener('click', (event) => {
+    event.preventDefault(); 
+    audiothx.play().catch(error => {
+      console.log("Play error:", error);
+    });
+
+    setTimeout(() => {
+      window.location.href = link.href; 
+    }, 1000);
+  });
+</script>
+
+
+	 <script>
+    const originalTitle = document.title;
+    let animationInterval;
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        let text = "🇺🇸 BIG BROTHER IS WATCHING YOU 🇺🇸";
+        let index = 0;
+        
+        animationInterval = setInterval(() => {
+          document.title = text.slice(index) + text.slice(0, index);
+          index = (index + 1) % text.length;
+        }, 300);
+      } else {
+        clearInterval(animationInterval);
+        document.title = originalTitle;
+      }
+    });
+  </script>
+</body>
+</html>

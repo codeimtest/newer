@@ -1,0 +1,47 @@
+body {
+  background-color: #002868;
+  cursor: none;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper{
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	top: 0;
+	background: #000;
+	z-index: 1;
+}
+.wrapper marquee{
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+	padding: 20px 0;
+	font-size: 60px;
+	font-family: Holtwood One SC;
+	cursor: pointer;
+}
+.wrapper a{
+	color: #fff;
+	text-decoration: none;;
+}
+.text{
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	color: #fff;
+	margin: auto;
+	font-family: Holtwood One SC;
+	text-align: center;
+}
