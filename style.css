@@ -45,3 +45,15 @@ canvas {
 	font-family: Holtwood One SC;
 	text-align: center;
 }
+.contract{
+	text-align: center;
+	color: #fff;
+	font-family: Holtwood One SC;
+	z-index: 1;
+	cursor: auto;
+}
+.contract b{
+	font-size: 30px;
+	padding: 10px 0;
+	display: block;
+}
